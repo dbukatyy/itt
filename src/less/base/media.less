@@ -1,0 +1,112 @@
+@media all and (max-width: 992px) {
+	.hamburger {
+		display: inline-block;
+	}
+
+	.header__menu {
+		display: none;
+	}
+
+	.menu_center {
+		width: 90%;
+		justify-content: center;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.portfolio__item {
+		width: 30%;
+		text-align: center;
+		margin: 10px 5px;
+
+		&_sm {
+			width: 20%;
+		}
+	}
+
+	.product {
+		&__media {
+			width: 100%;
+			margin-right: 0;
+		}
+
+		&__description {
+			width: 100%;
+		}
+	}
+
+	.section_bg {
+		background-position: 70%;
+	}
+}
+
+@media all and (max-width: 480px) {
+	.hamburger {
+		right: 0;
+	}
+
+	.header {
+		padding: 70px 10px 10px;
+
+		&__kontact {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			right: 0;
+			top: -60px;
+		}
+
+		&_fixed {
+			padding: 40px 10px 10px;
+
+			.header__kontact {
+				top: -35px;
+			}
+
+			.tel {
+				font-size: 1em;
+			}
+		}
+	}
+
+	.section {
+		padding: 10px 0;
+
+		&__title {
+			font-size: 2.5em;
+			margin: 15px 0;
+		}
+
+		&_bg {
+			background-position: 20% 50% ;
+			padding-top: 70px;
+		}
+	}
+
+	.portfolio {
+		justify-content: center;
+		&__item {
+			width: 100%;
+
+			&_sm {
+				width: 80%;
+			}
+		}
+	}
+
+	.tel {
+		margin: 0;
+	}
+
+	.events {
+		width: 100%;
+		&__item {
+			height: 200px;
+		}
+	}
+
+	.slick-prev,
+	.slick-next {
+		display: none;
+	}
+}
