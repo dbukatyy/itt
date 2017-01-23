@@ -11,66 +11,253 @@ The large array-like variables contain all information about a single icon
 At the bottom of this section, we provide information about the spritesheet itself
 @spritesheet: width height image @spritesheet-sprites;
 */
-@bage-name: 'bage';
-@bage-x: 0px;
-@bage-y: 0px;
-@bage-offset-x: 0px;
-@bage-offset-y: 0px;
-@bage-width: 73px;
-@bage-height: 72px;
-@bage-total-width: 246px;
-@bage-total-height: 158px;
-@bage-image: 'sprite.png';
-@bage: 0px 0px 0px 0px 73px 72px 246px 158px '../img/sprite.png' 'bage';
-@cup-name: 'cup';
-@cup-x: 86px;
-@cup-y: 92px;
-@cup-offset-x: -86px;
-@cup-offset-y: -92px;
-@cup-width: 60px;
-@cup-height: 64px;
-@cup-total-width: 246px;
-@cup-total-height: 158px;
-@cup-image: 'sprite.png';
-@cup: 86px 92px -86px -92px 60px 64px 246px 158px '../img/sprite.png' 'cup';
-@heart-name: 'heart';
-@heart-x: 185px;
-@heart-y: 0px;
-@heart-offset-x: -185px;
-@heart-offset-y: 0px;
-@heart-width: 61px;
-@heart-height: 59px;
-@heart-total-width: 246px;
-@heart-total-height: 158px;
-@heart-image: 'sprite.png';
-@heart: 185px 0px -185px 0px 61px 59px 246px 158px '../img/sprite.png' 'heart';
-@pensil-name: 'pensil';
-@pensil-x: 0px;
-@pensil-y: 92px;
-@pensil-offset-x: 0px;
-@pensil-offset-y: -92px;
-@pensil-width: 66px;
-@pensil-height: 66px;
-@pensil-total-width: 246px;
-@pensil-total-height: 158px;
-@pensil-image: 'sprite.png';
-@pensil: 0px 92px 0px -92px 66px 66px 246px 158px '../img/sprite.png' 'pensil';
-@t-shirt-name: 't-shirt';
-@t-shirt-x: 93px;
-@t-shirt-y: 0px;
-@t-shirt-offset-x: -93px;
-@t-shirt-offset-y: 0px;
-@t-shirt-width: 72px;
-@t-shirt-height: 72px;
-@t-shirt-total-width: 246px;
-@t-shirt-total-height: 158px;
-@t-shirt-image: 'sprite.png';
-@t-shirt: 93px 0px -93px 0px 72px 72px 246px 158px '../img/sprite.png' 't-shirt';
-@spritesheet-width: 246px;
-@spritesheet-height: 158px;
+@-business-name: 'Business';
+@-business-x: 116px;
+@-business-y: 0px;
+@-business-offset-x: -116px;
+@-business-offset-y: 0px;
+@-business-width: 96px;
+@-business-height: 96px;
+@-business-total-width: 560px;
+@-business-total-height: 560px;
+@-business-image: '../img/sprite.png';
+@-business: 116px 0px -116px 0px 96px 96px 560px 560px '../img/sprite.png' 'Business';
+@-circled-user-male-name: 'Circled User Male';
+@-circled-user-male-x: 348px;
+@-circled-user-male-y: 232px;
+@-circled-user-male-offset-x: -348px;
+@-circled-user-male-offset-y: -232px;
+@-circled-user-male-width: 96px;
+@-circled-user-male-height: 96px;
+@-circled-user-male-total-width: 560px;
+@-circled-user-male-total-height: 560px;
+@-circled-user-male-image: '../img/sprite.png';
+@-circled-user-male: 348px 232px -348px -232px 96px 96px 560px 560px '../img/sprite.png' 'Circled User Male';
+@-clock-name: 'Clock';
+@-clock-x: 0px;
+@-clock-y: 116px;
+@-clock-offset-x: 0px;
+@-clock-offset-y: -116px;
+@-clock-width: 96px;
+@-clock-height: 96px;
+@-clock-total-width: 560px;
+@-clock-total-height: 560px;
+@-clock-image: '../img/sprite.png';
+@-clock: 0px 116px 0px -116px 96px 96px 560px 560px '../img/sprite.png' 'Clock';
+@-design-name: 'Design';
+@-design-x: 116px;
+@-design-y: 116px;
+@-design-offset-x: -116px;
+@-design-offset-y: -116px;
+@-design-width: 96px;
+@-design-height: 96px;
+@-design-total-width: 560px;
+@-design-total-height: 560px;
+@-design-image: '../img/sprite.png';
+@-design: 116px 116px -116px -116px 96px 96px 560px 560px '../img/sprite.png' 'Design';
+@-edit-property-name: 'Edit Property';
+@-edit-property-x: 232px;
+@-edit-property-y: 0px;
+@-edit-property-offset-x: -232px;
+@-edit-property-offset-y: 0px;
+@-edit-property-width: 96px;
+@-edit-property-height: 96px;
+@-edit-property-total-width: 560px;
+@-edit-property-total-height: 560px;
+@-edit-property-image: '../img/sprite.png';
+@-edit-property: 232px 0px -232px 0px 96px 96px 560px 560px '../img/sprite.png' 'Edit Property';
+@-edit-name: 'Edit';
+@-edit-x: 232px;
+@-edit-y: 116px;
+@-edit-offset-x: -232px;
+@-edit-offset-y: -116px;
+@-edit-width: 96px;
+@-edit-height: 96px;
+@-edit-total-width: 560px;
+@-edit-total-height: 560px;
+@-edit-image: '../img/sprite.png';
+@-edit: 232px 116px -232px -116px 96px 96px 560px 560px '../img/sprite.png' 'Edit';
+@-email-name: 'Email';
+@-email-x: 0px;
+@-email-y: 232px;
+@-email-offset-x: 0px;
+@-email-offset-y: -232px;
+@-email-width: 96px;
+@-email-height: 96px;
+@-email-total-width: 560px;
+@-email-total-height: 560px;
+@-email-image: '../img/sprite.png';
+@-email: 0px 232px 0px -232px 96px 96px 560px 560px '../img/sprite.png' 'Email';
+@-event-accepted-name: 'Event Accepted';
+@-event-accepted-x: 116px;
+@-event-accepted-y: 232px;
+@-event-accepted-offset-x: -116px;
+@-event-accepted-offset-y: -232px;
+@-event-accepted-width: 96px;
+@-event-accepted-height: 96px;
+@-event-accepted-total-width: 560px;
+@-event-accepted-total-height: 560px;
+@-event-accepted-image: '../img/sprite.png';
+@-event-accepted: 116px 232px -116px -232px 96px 96px 560px 560px '../img/sprite.png' 'Event Accepted';
+@-headset-name: 'Headset';
+@-headset-x: 232px;
+@-headset-y: 232px;
+@-headset-offset-x: -232px;
+@-headset-offset-y: -232px;
+@-headset-width: 96px;
+@-headset-height: 96px;
+@-headset-total-width: 560px;
+@-headset-total-height: 560px;
+@-headset-image: '../img/sprite.png';
+@-headset: 232px 232px -232px -232px 96px 96px 560px 560px '../img/sprite.png' 'Headset';
+@-maintenance-name: 'Maintenance';
+@-maintenance-x: 348px;
+@-maintenance-y: 116px;
+@-maintenance-offset-x: -348px;
+@-maintenance-offset-y: -116px;
+@-maintenance-width: 96px;
+@-maintenance-height: 96px;
+@-maintenance-total-width: 560px;
+@-maintenance-total-height: 560px;
+@-maintenance-image: '../img/sprite.png';
+@-maintenance: 348px 116px -348px -116px 96px 96px 560px 560px '../img/sprite.png' 'Maintenance';
+@-marker-name: 'Marker';
+@-marker-x: 0px;
+@-marker-y: 0px;
+@-marker-offset-x: 0px;
+@-marker-offset-y: 0px;
+@-marker-width: 96px;
+@-marker-height: 96px;
+@-marker-total-width: 560px;
+@-marker-total-height: 560px;
+@-marker-image: '../img/sprite.png';
+@-marker: 0px 0px 0px 0px 96px 96px 560px 560px '../img/sprite.png' 'Marker';
+@-monitor-name: 'Monitor';
+@-monitor-x: 0px;
+@-monitor-y: 348px;
+@-monitor-offset-x: 0px;
+@-monitor-offset-y: -348px;
+@-monitor-width: 96px;
+@-monitor-height: 96px;
+@-monitor-total-width: 560px;
+@-monitor-total-height: 560px;
+@-monitor-image: '../img/sprite.png';
+@-monitor: 0px 348px 0px -348px 96px 96px 560px 560px '../img/sprite.png' 'Monitor';
+@-ok-name: 'Ok';
+@-ok-x: 232px;
+@-ok-y: 348px;
+@-ok-offset-x: -232px;
+@-ok-offset-y: -348px;
+@-ok-width: 96px;
+@-ok-height: 96px;
+@-ok-total-width: 560px;
+@-ok-total-height: 560px;
+@-ok-image: '../img/sprite.png';
+@-ok: 232px 348px -232px -348px 96px 96px 560px 560px '../img/sprite.png' 'Ok';
+@-p-d-f-name: 'PDF';
+@-p-d-f-x: 348px;
+@-p-d-f-y: 348px;
+@-p-d-f-offset-x: -348px;
+@-p-d-f-offset-y: -348px;
+@-p-d-f-width: 96px;
+@-p-d-f-height: 96px;
+@-p-d-f-total-width: 560px;
+@-p-d-f-total-height: 560px;
+@-p-d-f-image: '../img/sprite.png';
+@-p-d-f: 348px 348px -348px -348px 96px 96px 560px 560px '../img/sprite.png' 'PDF';
+@-phone-name: 'Phone';
+@-phone-x: 464px;
+@-phone-y: 0px;
+@-phone-offset-x: -464px;
+@-phone-offset-y: 0px;
+@-phone-width: 96px;
+@-phone-height: 96px;
+@-phone-total-width: 560px;
+@-phone-total-height: 560px;
+@-phone-image: '../img/sprite.png';
+@-phone: 464px 0px -464px 0px 96px 96px 560px 560px '../img/sprite.png' 'Phone';
+@-purchase-order-name: 'Purchase Order';
+@-purchase-order-x: 464px;
+@-purchase-order-y: 116px;
+@-purchase-order-offset-x: -464px;
+@-purchase-order-offset-y: -116px;
+@-purchase-order-width: 96px;
+@-purchase-order-height: 96px;
+@-purchase-order-total-width: 560px;
+@-purchase-order-total-height: 560px;
+@-purchase-order-image: '../img/sprite.png';
+@-purchase-order: 464px 116px -464px -116px 96px 96px 560px 560px '../img/sprite.png' 'Purchase Order';
+@-search-property-name: 'Search Property';
+@-search-property-x: 464px;
+@-search-property-y: 232px;
+@-search-property-offset-x: -464px;
+@-search-property-offset-y: -232px;
+@-search-property-width: 96px;
+@-search-property-height: 96px;
+@-search-property-total-width: 560px;
+@-search-property-total-height: 560px;
+@-search-property-image: '../img/sprite.png';
+@-search-property: 464px 232px -464px -232px 96px 96px 560px 560px '../img/sprite.png' 'Search Property';
+@-sent-name: 'Sent';
+@-sent-x: 464px;
+@-sent-y: 348px;
+@-sent-offset-x: -464px;
+@-sent-offset-y: -348px;
+@-sent-width: 96px;
+@-sent-height: 96px;
+@-sent-total-width: 560px;
+@-sent-total-height: 560px;
+@-sent-image: '../img/sprite.png';
+@-sent: 464px 348px -464px -348px 96px 96px 560px 560px '../img/sprite.png' 'Sent';
+@-smartphone-tablet-name: 'Smartphone Tablet';
+@-smartphone-tablet-x: 116px;
+@-smartphone-tablet-y: 348px;
+@-smartphone-tablet-offset-x: -116px;
+@-smartphone-tablet-offset-y: -348px;
+@-smartphone-tablet-width: 96px;
+@-smartphone-tablet-height: 96px;
+@-smartphone-tablet-total-width: 560px;
+@-smartphone-tablet-total-height: 560px;
+@-smartphone-tablet-image: '../img/sprite.png';
+@-smartphone-tablet: 116px 348px -116px -348px 96px 96px 560px 560px '../img/sprite.png' 'Smartphone Tablet';
+@-tax-name: 'Tax';
+@-tax-x: 0px;
+@-tax-y: 464px;
+@-tax-offset-x: 0px;
+@-tax-offset-y: -464px;
+@-tax-width: 96px;
+@-tax-height: 96px;
+@-tax-total-width: 560px;
+@-tax-total-height: 560px;
+@-tax-image: '../img/sprite.png';
+@-tax: 0px 464px 0px -464px 96px 96px 560px 560px '../img/sprite.png' 'Tax';
+@i-phone-name: 'iPhone';
+@i-phone-x: 348px;
+@i-phone-y: 0px;
+@i-phone-offset-x: -348px;
+@i-phone-offset-y: 0px;
+@i-phone-width: 96px;
+@i-phone-height: 96px;
+@i-phone-total-width: 560px;
+@i-phone-total-height: 560px;
+@i-phone-image: '../img/sprite.png';
+@i-phone: 348px 0px -348px 0px 96px 96px 560px 560px '../img/sprite.png' 'iPhone';
+@mouse-name: 'mouse';
+@mouse-x: 116px;
+@mouse-y: 464px;
+@mouse-offset-x: -116px;
+@mouse-offset-y: -464px;
+@mouse-width: 31px;
+@mouse-height: 44px;
+@mouse-total-width: 560px;
+@mouse-total-height: 560px;
+@mouse-image: '../img/sprite.png';
+@mouse: 116px 464px -116px -464px 31px 44px 560px 560px '../img/sprite.png' 'mouse';
+@spritesheet-width: 560px;
+@spritesheet-height: 560px;
 @spritesheet-image: '../img/sprite.png';
-@spritesheet-sprites: @bage @cup @heart @pensil @t-shirt;
-@spritesheet: 246px 158px '../img/sprite.png' @spritesheet-sprites;
+@spritesheet-sprites: @-business @-circled-user-male @-clock @-design @-edit-property @-edit @-email @-event-accepted @-headset @-maintenance @-marker @-monitor @-ok @-p-d-f @-phone @-purchase-order @-search-property @-sent @-smartphone-tablet @-tax @i-phone @mouse;
+@spritesheet: 560px 560px '../img/sprite.png' @spritesheet-sprites;
 
 /*
 The provided classes are intended to be used with the array-like variables
@@ -145,50 +332,94 @@ This must be run when you have at least 2 sprites.
 
 .icon {
   display: inline-block;
-  position: relative;
-
-  &:hover {
-    .icon__bgr {
-      transform: scale(1.5);
-    }
-  }
-
-  &__bgr {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background: @c-orange;
-    border-radius: 50%;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    transition: all .3s;
-
-    &_light {
-      background: @c-white;
-    }
-  }
 }
 
-.icon-cup {
-  .sprite(@cup);
+.icon-business {
+  .sprite(@-business);
 }
 
-.icon-pencil {
-  .sprite(@pensil);
+.icon-circled-user-male {
+  .sprite(@-circled-user-male);
 }
 
-.icon-shirt {
-  .sprite(@t-shirt);
+.icon-clock {
+  .sprite(@-clock);
 }
 
-.icon-bage {
-  .sprite(@bage);
+.icon-design {
+  .sprite(@-design);
 }
 
-.icon-heart {
-  .sprite(@heart);
+.icon-edit-property {
+  .sprite(@-edit-property);
 }
+
+.icon-edit {
+  .sprite(@-edit);
+}
+
+.icon-email {
+  .sprite(@-email);
+}
+
+.icon-event-accepted {
+  .sprite(@-event-accepted);
+}
+
+.icon-headset {
+  .sprite(@-headset);
+}
+
+.icon-maintenance {
+  .sprite(@-maintenance);
+}
+
+.icon-marker {
+  .sprite(@-marker);
+}
+
+
+.icon-monitor {
+  .sprite(@-monitor);
+}
+
+.icon-event-accepted {
+  .sprite(@-event-accepted);
+}
+
+.icon-phone {
+  .sprite(@-phone);
+}
+
+.icon-purchase-order {
+  .sprite(@-purchase-order);
+}
+
+.search-property {
+  .sprite(@-search-property);
+}
+
+.icon-pdf {
+  .sprite(@-p-d-f);
+}
+
+.icon-sent {
+  .sprite(@-sent);
+}
+
+.icon-smartphone-tablet {
+  .sprite(@-smartphone-tablet);
+}
+
+.icon-sent {
+  .sprite(@-tax);
+}
+
+.icon-i-phone {
+  .sprite(@i-phone);
+}
+
+.icon-mouse {
+  .sprite(@mouse);
+}
+
