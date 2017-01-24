@@ -5,6 +5,7 @@
 	<title>Home</title>
 	<meta name="keywords" content="Test" />
 	<meta name="description" content="Test">
+	<meta name="author" content="ittech"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	//= template/head.html
@@ -16,7 +17,7 @@
 			<div class="section__header">
 				<h3>ЧТО МЫ ПРЕДЛАГАЕМ</h3>
 				<h2 class="txt-select">ПОЛНЫЙ СПЕКТР УСЛУГ</h2>
-				<p>замутим сайт да ещё и рабочий да ещё и хвайный</p>
+				<p>замутим сайт да ещё и рабочий <br>да ещё и хвайный</p>
 			</div>
 			<div class="row">
 				<div class="col-sm-6">
@@ -29,7 +30,7 @@
 						<li class="service-list__item service">
 							<div class="service__head">
 								<i class="icon icon-smartphone-tablet"></i>
-								<span class="txt-select">Адаптивный сайт</span>
+								<span class="txt-select">Адаптивный <br>сайт</span>
 							</div>
 							<p class="service__txt">
 								Ваш сайт будет адаптирован не только под ПК но и под все мобильные устройства
@@ -38,7 +39,7 @@
 						<li class="service-list__item service">
 							<div class="service__head">
 								<i class="icon icon-design"></i>
-								<span class="txt-select">Уникальный дизайн</span>
+								<span class="txt-select">Уникальный <br>дизайн</span>
 							</div>
 							<p class="service__txt">
 								Ваш сайт не будет похож на другие. Что позволит вам выделиться.
@@ -47,7 +48,7 @@
 						<li class="service-list__item service">
 							<div class="service__head">
 								<i class="icon icon-search-property"></i>
-								<span class="txt-select">Продвижение в сети</span>
+								<span class="txt-select">Продвижение <br>в сети</span>
 							</div>
 							<p class="service__txt">
 								Поможем в продвижении сайта в поисковых системах на первые полосы.
@@ -56,13 +57,17 @@
 						<li class="service-list__item service">
 							<div class="service__head">
 								<i class="icon icon-tax"></i>
-								<span class="txt-select">Рассрочка на 3, 6, 12</span>
+								<span class="txt-select">Рассрочка <br>на 3, 6, 12</span>
 							</div>
 							<p class="service__txt">
 								Удобство в оплате позволит вам пользоваться сайтом сейчас а платить потом
 							</p>
 						</li>
 					</ul>
+					<div class="more">
+						<p>Если вас интересуют подробности, больше информации можно получить скачаф прайс</p>
+						<a href="" class="button txt-select">скачать PDF<i class="icon icon-pdf"></i></a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -71,16 +76,106 @@
 	<section class="section payment">
 		<div class="container">
 			<div class="section__header">
-				<h3>рассрочкa</h3>
+				<h3 class="txt-light">рассрочкa</h3>
 				<h2 class="txt-select">ПРЕИМУЩЕСТВА РАССРОЧКИ</h2>
-				<p>это отличный способ оптимизировать свои инвестиции на создание сайта.</p>
-				<div class="row">
-					<div class="col-sm-6"></div>
-					<div class="col-sm-6"></div>
+				<p class="txt-light">это отличный способ оптимизировать свои <br>инвестиции на создание сайта.</p>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 payment__txt">
+					<ul class="list">
+						<li class="list__item">
+							<i class="txt-select">1</i>
+							<p class="txt-light">отсутствие дополнительных платежей за поддержку сайта на период рассрочки</p>
+						</li>
+						<li class="list__item">
+							<i class="txt-select">2</i>
+							<p class="txt-light">отсутствие минимальной стоимости заказа для оформления рассрочки</p>
+						</li>
+						<li class="list__item">
+							<i class="txt-select">3</i>
+							<p class="txt-light">освобождение дополнительных средств, которые разумно инвестировать в продвижение</p>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-6 payment__img">
+					<img src="img/Группа 2.png" alt="screen">
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<section class="section order">
+		<div class="container">
+			<div class="section__header">
+				<h3>ИНТЕРЕСНО?</h3>
+				<h2 class="txt-select">ОФОРМИ ЗАКАЗ СЕЙЧАС</h2>
+				<p>есть вопросы или желание разработать <br>сайт уже сейчас? Заполните форму <br>и мы поможем вам.</p>
+			</div>
+			<div class="form">
+				<form action="#">
+					<div class="form__item">
+						<i class="icon icon-circled-user"></i>
+						<input name="name" id="name" type="text">
+					</div>
+					<div class="form__item">
+						<i class="icon icon-phone-dark"></i>
+						<input name="phone" id="phone" type="tel">
+					</div>
+					<div class="form__item">
+						<i class="icon icon-email-dark"></i>
+						<input name="email" id="email" type="email">
+					</div>
+					<div class="form__item form__item_full">
+						<i class="icon icon-edit-black"></i>
+						<textarea name="message" id="message"></textarea>
+					</div>
+				</form>
+				<div class="form__bottom">
+					<p class="txt-sm">Я даю своё согласие на обработку персональных данных. <i class="icon icon-ok"></i></p>
+					<button type="submit" class="button txt-select">отправить <i class="icon icon-sent"></i></button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section contacts">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-7 contacts__media">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.6914392403332!2d23.689292815509603!3d52.08534667973418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47210bf365abe23d%3A0x7555007bb1460568!2z0YPQuy4g0KHQvtCy0LXRgtGB0LrQuNGFINC_0L7Qs9GA0LDQvdC40YfQvdC40LrQvtCyIDQyLCDQkdGA0LXRgdGCIDIyNDAzMiwg0JHQtdC70LDRgNGD0YHRjA!5e0!3m2!1sru!2sru!4v1485264800944" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				<div class="col-sm-5 contacts__info">
+					<div class="contacts__header">
+						<div class="section__header">
+							<h3 class="txt-light">как нас найти</h3>
+							<h2 class="txt-select">КОНТАКТЫ И КАРТА</h2>
+							<p class="txt-light">Также все вопросы можно обсудить <br>с нами лично в офисе.</p>
+						</div>
+					</div>
+					<address>
+						<ul class="lists">
+							<h4 class="txt-select">наш адрес</h4>
+							<li class="lists__item">
+								<i class="icon icon-marker i-top"></i>
+								<p class="txt-light txt-sm">Брест, ул. Советских пограничников 42,<br>3 этаж, кабинет 5</p>
+							</li>
+						</ul>
+						<ul class="lists">
+							<h4 class="txt-select">наши контакты</h4>
+							<li class="lists__item">
+								<i class="icon icon-phone"></i>
+								<a href="tel:+375 29 548 48 78" class="txt-light txt-sm">+375 29 548 48 78</a>
+							</li>
+							<li class="lists__item">
+								<i class="icon icon-email"></i>
+								<a href="mailto:brest.ittech@gmail.com" class="txt-light txt-sm">brest.ittech@gmail.com</a>
+							</li>
+						</ul>
+					</address>
+				</div>
+			</div>
+		</div>
+	</section>		
 	//= template/footer.html
 	//= template/foot.html
 </body>
