@@ -1,1 +1,1 @@
-jQuery(document).ready(function(){});
+jQuery(document).ready(function(){$(".footer__img img").on("mouseover",function(n){$(this).attr("src","../img/logo-txt.png")}),$(".footer__img img").on("mouseout",function(n){$(this).attr("src","../img/logo-light.png")});var n=new Slideout({panel:document.getElementById("panel"),menu:document.getElementById("menu"),padding:256,tolerance:70,side:"right"});$(".hamburger").on("click",function(e){n.open()}),$(".btn-close").on("click",function(e){n.close()})});

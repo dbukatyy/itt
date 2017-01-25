@@ -19,6 +19,19 @@
 	<!-- <script src="js/jquery.min.js"></script> -->
 </head>
 <body>
+
+<nav id="menu">
+       <ul class="menu menu_vertical">
+			<li class="menu__item"><a href="">главная</a></li>
+			<li class="menu__item"><a href="">услуги</a></li>
+			<li class="menu__item"><a href="">рассрочка</a></li>
+			<li class="menu__item"><a href="">заказ</a></li>
+			<li class="menu__item"><a href="">контакты</a></li>
+		</ul>
+	<div class="btn-close"></div>
+</nav>
+
+<main id="panel">
 	<header class="header">
 		<div class="container">
 			<div class="header-top">
@@ -36,7 +49,12 @@
 						<li class="menu__item"><a href="">контакты</a></li>
 					</ul>
 				</nav>
-			</div><!--header-top-->
+				<div class="hamburger">
+			  		<div class="hamburger-box">
+			    		<div class="hamburger-inner"></div>
+			  		</div>
+				</div>
+			</div>	
 			<div class="header__txt">
 				<div class="header__logo">
 					<a href="">
@@ -48,7 +66,6 @@
 				</div>
 			</div>
 			<i class="icon icon-mouse header__mouse"></i>
-		</div>
 	</header><!--header-->
 	<section class="section services">
 		<div class="container">
@@ -58,12 +75,12 @@
 				<p>замутим сайт да ещё и рабочий <br>да ещё и хвайный</p>
 			</div>
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-md-6">
 					<div class="services__img">
 						<img src="img/APPLE DEVICES.png" alt="devices">
 					</div>	
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-6">
 					<ul class="service-list">
 						<li class="service-list__item service">
 							<div class="service__head">
@@ -225,14 +242,15 @@
 			</ul>
 		</nav>
 		<div class="footer__img">
-			<img src="../img/logo-light.png" alt="ittech">
+			<a href=""><img src="../img/logo-light.png" alt="ittech"></a>
 		</div>
 		<ul class="menu menu_center">
 				<li class="menu__item menu__item_bordered"><a href=""><i class="icon-vk"></i></a></li>
-				<li class="menu__item menu__item_bordered"><a href=""><i class="icon-insta"></i></a></li>
+				<li class="menu__item menu__item_bordered"><a href=""><i class="icon-facebook"></i></a></li>
 				<li class="menu__item menu__item_bordered"><a href=""><i class="icon-insta"></i></a></li>
 		</ul>
 	</footer>
+</main>
 	<script src="js/vendor.js"></script>
 	<script src="js/custom.js"></script>
 </body>

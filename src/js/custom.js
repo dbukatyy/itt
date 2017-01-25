@@ -58,7 +58,29 @@ jQuery(document).ready(function () {
     //     loop = setInterval( scrollTo, 10, dec);
 
     // });
+    $('.footer__img img').on('mouseover', function (e) {
+        $(this).attr('src','../img/logo-txt.png');
+    });
+     // });
+    $('.footer__img img').on('mouseout', function (e) {
+        $(this).attr('src','../img/logo-light.png');
+    });
 
+    var slideout = new Slideout({
+        'panel': document.getElementById('panel'),
+        'menu': document.getElementById('menu'),
+        'padding': 256,
+        'tolerance': 70,
+        'side' : 'right'
+      });
+
+    $('.hamburger').on('click', function (e) {
+        slideout.open();
+    });
+
+    $('.btn-close').on('click', function (e) {
+        slideout.close();
+    });
 });
 
 
