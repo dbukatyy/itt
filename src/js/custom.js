@@ -1,71 +1,14 @@
 jQuery(document).ready(function () {
 
-    var flag = false;
-
-
-	// hamburger
-
-    // $('.hamburger').on('click', function (e) {
-    // 	slideout.open();
-    // });
-
-    // $('.btn-close').on('click', function (e) {
-    // 	slideout.close();
-    // });
-    
-
-    // // fixed menu
-    // $(document).on('scroll', function (e) {
-
-    // 	var scrollTop = $(this).scrollTop();
-
-    // 	if (scrollTop > 350) {
-
-    // 		if (!flag) {
-    // 			$('.header').hide().addClass('header_fixed').slideDown(300);
-    //             $('.to-top').fadeIn(500);
-    // 			flag = true;
-    // 		}
-
-    // 	} else if (scrollTop < 350) {
-    // 		$('.header').removeClass('header_fixed');
-    //          $('.to-top').fadeOut(200);
-    // 		flag = false;
-    // 	}
-    // });
-
-    // button to-top
-    // $('.to-top').on('click', function (e) {
-    //     var doc = $(document),
-    //         scroll = doc.scrollTop(), // текущий скролл страницы
-    //         dec = 100,            // шаг скроллинга
-    //         loop;
-
-    //     function scrollTo(dec) {
-
-    //         scroll -= dec;
-    //         doc.scrollTop(scroll);
-
-    //         if(scroll < 0) {
-    //             clearLoop(loop)
-    //         }
-    //     }
-
-    //     function clearLoop(loop) {
-    //         clearInterval(loop);
-    //     }
-
-    //     loop = setInterval( scrollTo, 10, dec);
-
-    // });
     $('.footer__img img').on('mouseover', function (e) {
-        $(this).attr('src','../img/logo-txt.png');
+        $(this).attr('src','assets/templates/vygoda/img/logo-txt.png');
     });
-     // });
+ 
     $('.footer__img img').on('mouseout', function (e) {
-        $(this).attr('src','../img/logo-light.png');
+        $(this).attr('src','assets/templates/vygoda/img/logo-light.png');
     });
 
+    // aside menu
     var slideout = new Slideout({
         'panel': document.getElementById('panel'),
         'menu': document.getElementById('menu'),
@@ -78,8 +21,86 @@ jQuery(document).ready(function () {
         slideout.open();
     });
 
-    $('.btn-close').on('click', function (e) {
+    $('#menu .btn-close').on('click', function (e) {
         slideout.close();
+    });
+
+    // popup window
+    $('.alert .btn-close').on('click', function (e) {
+        $(this).closest('.alert').hide();
+    });
+
+    $('.alert').on('click', function (e) {
+        e.stopPropagation();
+        $(this).hide();
+    });
+
+    function validate () {
+       
+        var valid = true,
+            inputs =  $('#orderForm input').not('#agree'),
+            textarea = $('#message');
+
+       inputs.each( function () {
+
+            if ( $(this).val() === '' ) {
+                valid = false;
+                return false;
+            } 
+       });
+
+       if (valid) {
+            valid = !(textarea.val() === '');
+
+            if (valid) {
+                valid = agree.checked;
+            }
+       } 
+      
+      return valid;
+    }
+
+    // ajax send form
+    $('#orderForm .button').on('click', function (e) {
+        e.preventDefault();
+        
+        var win = $('.alert'),
+            message = $('.alert__body'),
+            errorMsg = $('.msg'),
+            form = document.querySelector('#orderForm'),
+            valid = validate ();
+
+        function showMessage(data) {
+            message.text(data);
+            win.css('display','flex');
+        }
+
+        if (valid) {
+
+             $.ajax({    
+                url: $("#orderForm").attr('action'),
+                data: $("#orderForm").serialize(),
+                type: 'POST',
+                success: function(data){
+                    showMessage(data);
+                },
+                error: function(){
+                    showMessage('Ошибка отправки. Пожалуйста, повторите попытку.');
+                },
+                complete: function(){
+                    setTimeout(function () {
+                        win.fadeOut(500);
+                    }, 3000);
+
+                    form.reset();
+                }
+            });
+         } else {
+            errorMsg.css('opacity', '1');
+            setTimeout( function () {
+                errorMsg.css('opacity', '0');
+            }, 5000);
+         }
     });
 });
 

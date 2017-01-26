@@ -167,28 +167,36 @@
 				<p>есть вопросы или желание разработать <br>сайт уже сейчас? Заполните форму <br>и мы поможем вам.</p>
 			</div>
 			<div class="form">
-				<form action="#">
+				<form id="orderForm" action="#">
 					<div class="form__item">
 						<i class="icon icon-circled-user"></i>
+						<i class="icon-check"></i>
 						<input name="name" id="name" type="text">
 					</div>
 					<div class="form__item">
 						<i class="icon icon-phone-dark"></i>
+						<i class="icon-check"></i>
 						<input name="phone" id="phone" type="tel">
 					</div>
 					<div class="form__item">
 						<i class="icon icon-email-dark"></i>
+						<i class="icon-check"></i>
 						<input name="email" id="email" type="email">
 					</div>
 					<div class="form__item form__item_full">
 						<i class="icon icon-edit-black"></i>
 						<textarea name="message" id="message"></textarea>
 					</div>
+					<div class="form__bottom">
+						<label for="agree">
+							<input id="agree" name="agree" type="checkbox" value="yes">
+							<p class="txt-sm">Я даю своё согласие на обработку персональных данных.</p>
+							<span class="check"><i class="icon-check"></i></span>
+						</label>
+						<p class="msg">Пожалуйста, заполните все поля и подтвердите согласие на обработку данных</p>
+						<button type="submit" class="button txt-select">отправить <i class="icon icon-sent"></i></button>
+					</div>
 				</form>
-				<div class="form__bottom">
-					<p class="txt-sm">Я даю своё согласие на обработку персональных данных. <i class="icon icon-ok"></i></p>
-					<button type="submit" class="button txt-select">отправить <i class="icon icon-sent"></i></button>
-				</div>
 			</div>
 		</div>
 	</section>
@@ -251,6 +259,10 @@
 		</ul>
 	</footer>
 </main>
+<div class="alert">
+	<div class="alert__body">fdfdfdf</div>
+	<div class="btn-close"></div>
+</div>
 	<script src="js/vendor.js"></script>
 	<script src="js/custom.js"></script>
 </body>

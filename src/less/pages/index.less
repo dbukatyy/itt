@@ -368,10 +368,10 @@ textarea {
 			vertical-align: middle;
 		    width: 90px;
 		    height: 90px;
-		    display: flex;
+		    display: inline-flex;
 		    justify-content: center;
 		    align-items: center;
-		    margin: auto;
+		    margin-right: 15px;
 		}
 
 		p {
@@ -398,9 +398,19 @@ textarea {
 
 	&__bottom {
 		text-align: center;
+		position: relative;
 
 		button {
 			margin-top: 50px;
+		}
+		
+		label {
+			display: block;
+			cursor: pointer;
+		}
+
+		p {
+			display: inline-block;
 		}
 	}
 
@@ -417,10 +427,10 @@ textarea {
 			display: inline-block;
 			width: 100%;
 			line-height: 2em;
-			padding: 0 10px 0 50px;
+			padding: 0 25px 0 50px;
 		}
 
-		i {
+		.icon {
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -428,11 +438,17 @@ textarea {
 			margin: auto;
 		}
 
+		.icon-check {
+			position: absolute;
+			right: 0;
+			top: 5px;
+		}
+
 		&_full {
 			width: 100%;
 			margin-top: 20px;
 			
-			i {
+			.icon {
 				top: 10px;
 				margin: 0;
 			}
@@ -564,4 +580,67 @@ textarea {
 
 #menu {
 	background: @c-dblue;
+}
+
+.check {
+	vertical-align: middle;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 18px;
+	height: 18px;
+	border: 1px solid @c-gray;
+	border-radius: 50%;
+	margin-left: 10px;
+
+	i {
+		margin: auto;
+		font-size: .7em;
+		opacity: 0;
+		color: @c-blue;
+	}
+}
+
+#agree {
+	display: none;
+
+	&:checked ~ .check {
+		border: 1px solid @c-blue;
+
+		i {
+			opacity: 1;
+		}
+	}
+}
+
+.alert {
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.4);
+	z-index: 1000;
+
+	&__body {
+		text-align: center;
+		display: inline-block;
+		min-width: 30%;
+		min-height: 30%;
+		margin: auto;
+		background: @c-white;
+		border-radius: 5px;
+		padding: 10px 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.msg {
+	margin: 0;
+	width: 100%;
+	opacity: 0;
+	color: @c-blue;
 }
