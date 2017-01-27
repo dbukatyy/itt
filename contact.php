@@ -28,7 +28,7 @@ $errorMsg   = 'Хмммм, ошибочка вышла.... Простите!';
 /**
  * DO NOT EDIT ANYTHING BELOW THIS LINE, UNLESS YOU'RE SURE WHAT YOU'RE DOING
  */
-
+$title   = 'order';
 ?>
 <?php
 if(
@@ -41,7 +41,7 @@ if(
     empty($_POST['email']) ||
     empty($_POST['message']) 
 ) {
-    
+  
     echo  $fillMsg;
 } else {
 
@@ -49,16 +49,16 @@ if(
     <?php
 	$msg = "Имя: ".$_POST['name']."\r\n";
 	$msg .= "Телефон: ".$_POST['phone']."\r\n";
-    $msg .= "Email: ".$_POST['email']."\r\n";
 	$msg .= "Сообщение: ".$_POST['message']."\r\n";
+    $msg .= "Email: ".$_POST['email']."\r\n";
 
-    $success = @mail($mailTo, $_POST['email'], $msg, 'From: ' . $_POST['name'] . '<' . $_POST['email'] . '>');
+    $success = @mail($mailTo, $title, $msg, 'From: ' . $_POST['name'] . '<' . $_POST['email'] . '>');
     if ($success) {
   
         echo  $successMsg;
     } 
 		else {
-        
+       
             echo  $errorMsg;
     }
 }
