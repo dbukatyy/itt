@@ -1,5 +1,7 @@
 jQuery(document).ready(function () {
 
+    var topMenu = $('.header-top');
+
     $('.footer__img img').on('mouseover', function (e) {
         $(this).attr('src','assets/templates/vygoda/img/logo-txt.png');
     });
@@ -8,21 +10,34 @@ jQuery(document).ready(function () {
         $(this).attr('src','assets/templates/vygoda/img/logo-light.png');
     });
 
-    // aside menu
-    var slideout = new Slideout({
-        'panel': document.getElementById('panel'),
-        'menu': document.getElementById('menu'),
-        'padding': 256,
-        'tolerance': 70,
-        'side' : 'right'
-      });
+   $('#panel').on('scroll', function (e) {
 
-    $('.hamburger').on('click', function (e) {
-        slideout.open();
+        var scrollTop = $(this).scrollTop();
+
+        if (scrollTop > 100) {
+            topMenu.addClass('bgr');
+        } else {
+            topMenu.removeClass('bgr');
+        }
+    });
+
+
+    // aside menu
+   
+    var controller = new slidebars();
+        controller.init();
+
+    $( '.hamburger' ).on( 'click', function ( event ) {
+    // Stop default action and bubbling
+        event.stopPropagation();
+        event.preventDefault();
+
+        // Toggle the Slidebar with id 'id-1'
+        controller.open('id-1');
     });
 
     $('#menu .btn-close').on('click', function (e) {
-        slideout.close();
+        controller.close('id-1');
     });
 
     // popup window
@@ -35,6 +50,8 @@ jQuery(document).ready(function () {
         $(this).hide();
     });
 
+
+    // form validate
     function validate () {
        
         var valid = true,

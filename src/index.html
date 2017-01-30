@@ -6,13 +6,13 @@
 	<meta name="keywords" content="Test" />
 	<meta name="description" content="Test">
 	<meta name="author" content="ittech"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
 	//= template/head.html
 </head>
 <body>
 
-<nav id="menu">
+<nav  id="menu" off-canvas="id-1 right push">
        <ul class="menu menu_vertical">
 			<li class="menu__item"><a href="">главная</a></li>
 			<li class="menu__item"><a href="">услуги</a></li>
@@ -23,7 +23,34 @@
 	<div class="btn-close"></div>
 </nav>
 
-<main id="panel">
+<div id="fixed-position" canvas="" class="header-top">
+	<div class="container">
+		<div class="flex">
+			<div class="header-top__logo">
+				<a href="">
+					<img src="../img/logo-txt.png" alt="ittech">
+				</a>
+			</div>
+			<nav class="header-top__nav">
+				<ul class="menu">
+					<li class="menu__item"><a href="">главная</a></li>
+					<li class="menu__item"><a href="">услуги</a></li>
+					<li class="menu__item"><a href="">рассрочка</a></li>
+					<li class="menu__item"><a href="">заказ</a></li>
+					<li class="menu__item"><a href="">контакты</a></li>
+				</ul>
+			</nav>
+			<div class="hamburger">
+				<div class="hamburger-box">
+			   		<div class="hamburger-inner"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+
+
+<main id="panel" canvas="container">
 	//= template/header.html
 	<section class="section services">
 		<div class="container">
@@ -200,7 +227,7 @@
 	//= template/footer.html
 </main>
 <div class="alert">
-	<div class="alert__body">fdfdfdf</div>
+	<div class="alert__body"></div>
 	<div class="btn-close"></div>
 </div>
 	//= template/foot.html
