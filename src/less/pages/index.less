@@ -31,12 +31,21 @@ textarea {
 
 // header
 
-.bgr {
-	// background: rgba(14,21,31,.95);
-	box-shadow: 0 0 10px @c-dblue;
+	.bgr {
+		// background: rgba(14,21,31,.95);
+		box-shadow: 0 0 10px @c-dblue;
 		background: rgba(255,255,255,.95);
+		padding: 0 15px 5px !important;
+		// font-size: .8em;
 
-}
+		.menu {
+			margin: 0;
+		}
+
+		.header-top__logo {
+			width: 50px;
+		}
+	}
 
 .header {
 	min-height: 100vh;
@@ -48,6 +57,7 @@ textarea {
 		min-height: 100vh;
 	}
 
+
 	&-top {
 		position: fixed;
 		top: 0;
@@ -55,7 +65,7 @@ textarea {
 		right: 0;
 		padding: 0 15px 10px;
 		z-index: 2;
-		transition: all .7s;
+		transition: all .4s;
 
 		&__nav {
 			position: relative;
